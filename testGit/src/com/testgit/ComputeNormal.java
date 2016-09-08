@@ -1,5 +1,7 @@
 package com.testgit;
 
+import java.util.Calendar;
+
 public class ComputeNormal {
 
 	public static double comtax(double ware){
@@ -45,12 +47,28 @@ public class ComputeNormal {
 
 
 	public static void main(String[] args) throws Exception{
-		System.out.println(comtax(5000));
-		System.out.println(comtax(8000));
-		System.out.println(comtax(12500));
-		System.out.println(comtax(38500));
-		System.out.println(comtax(58500));
-		System.out.println(comtax(18000));
+		int id = 1;
+		String l = "313491000232201906100" + (id + 1);
+		Calendar c = Calendar.getInstance();
+		String hh = "" + c.get(Calendar.HOUR_OF_DAY);
+		String mm = "" + c.get(Calendar.MINUTE);
+		String ss = "" + c.get(Calendar.SECOND);
+		if(hh.length() == 1){
+			hh = "0" + hh;
+		}
+		if(mm.length() == 1){
+			mm = "0" + mm;
+		}
+		if(ss.length() == 1){
+			ss = "0" + ss;
+		}
+		System.out.println(l + " " + hh + mm + ss);
+//		System.out.println(comtax(5000));
+//		System.out.println(comtax(8000));
+//		System.out.println(comtax(12500));
+//		System.out.println(comtax(38500));
+//		System.out.println(comtax(58500));
+//		System.out.println(comtax(18000));
 		
 	}
 
